@@ -1,0 +1,23 @@
+﻿@model SocialMedia
+@{
+    ViewData["Title"] = "SMAdd";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Yeni Hesap Ekle</h1>
+
+<form method="post">
+	<label>Başlık</label>
+	<input type="text" class="form-control" asp-for="Title" style="border:1px solid black;" />
+	<br />
+	<label>Link</label>
+	<input type="text" class="form-control" asp-for="Url" style="border:1px solid black;" />
+	<br />
+	<label>İcon</label>
+	<input type="text" class="form-control" asp-for="Icon" style="border:1px solid black;" />
+	<br />
+	<button class="btn btn-primary">Ekle</button>
+</form>
+
+
+

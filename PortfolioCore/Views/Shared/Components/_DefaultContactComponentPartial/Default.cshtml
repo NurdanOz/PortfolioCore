@@ -1,0 +1,42 @@
+﻿@model List<Contact>
+
+<section id="contact" class="contact section">
+
+	<div class="container section-title" data-aos="fade-up">
+		<h2>İletişim</h2>
+	</div>
+	<div class="container" data-aos="fade" data-aos-delay="100">
+		<div class="row gy-4">
+			<div class="col-lg-4">
+				@foreach (var item in Model)
+				{
+					<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+						<i class="bi bi-geo-alt flex-shrink-0"></i>
+						<div>
+							<h3>Adres</h3>
+							<p>@item.Adress</p>
+						</div>
+					</div>				
+					<div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+						<i class="bi bi-telephone flex-shrink-0"></i>
+						<div>
+							<h3>Telefon</h3>
+							<p>@item.PhoneNumber</p>
+						</div>
+					</div>
+     <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+						<i class="bi bi-envelope flex-shrink-0"></i>
+						<div>
+							<h3>Mail</h3>
+							<p>@item.Email</p>
+						</div>
+					</div>
+				}
+			</div>
+
+			@await Component.InvokeAsync("_DefaultMessageComponentPartial")
+ 	</div>
+	</div>
+	<br />
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24176.1228853187!2d29.89137924902965!3d40.76168688423077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb45927cc9708b%3A0x9fb718db20609864!2sKocaeli%20Bilim%20Merkezi!5e0!3m2!1str!2str!4v1745894541778!5m2!1str!2str" width="1250" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
